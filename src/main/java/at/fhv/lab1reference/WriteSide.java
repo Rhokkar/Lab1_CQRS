@@ -13,3 +13,5 @@ public class WriteSide {
         SpringApplication.run(WriteSide.class, args);
     }
 }
+
+// localhost:8081/swagger-ui/index.html

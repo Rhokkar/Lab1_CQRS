@@ -13,3 +13,5 @@ public class EventSide {
         SpringApplication.run(EventSide.class, args);
     }
 }
+
+// localhost:8082/swagger-ui/index.html

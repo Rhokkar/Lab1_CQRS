@@ -13,3 +13,5 @@ public class ReadSide {
         SpringApplication.run(ReadSide.class, args);
     }
 }
+
+// localhost:8083/swagger-ui/index.html

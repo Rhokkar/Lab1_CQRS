@@ -24,10 +24,10 @@ public class BookingWriteRestController {
     }
 
     @PostMapping(value = "/cancelBooking")
-    public boolean cancelBooking(@RequestParam String bookingIdString) {
+    public boolean cancelBooking(@RequestParam String bookingIdString, @RequestParam String reason) {
         UUID bookingId = UUID.fromString(bookingIdString);
 
-        bookingWriteService.cancelBooking(bookingId);
+        bookingWriteService.cancelBooking(bookingId, reason);
 
         return true;
     }

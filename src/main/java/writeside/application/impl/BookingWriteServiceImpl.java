@@ -55,10 +55,10 @@ public class BookingWriteServiceImpl implements BookingWriteService {
     }
 
     @Override
-    public void cancelBooking(UUID bookingId) {
+    public void cancelBooking(UUID bookingId, String reason) {
         bookingRepository.cancelBooking(bookingId);
 
-        BookingCancelledEvent event = new BookingCancelledEvent(bookingId, "TEST TEST TEST TEST TEST");
+        BookingCancelledEvent event = new BookingCancelledEvent(bookingId, reason);
         eventPublisher.publishEvent(event);
     }
 }
