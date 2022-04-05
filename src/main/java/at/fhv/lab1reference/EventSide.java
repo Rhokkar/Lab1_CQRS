@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan("eventside")
 public class EventSide {
-    public static void main(String[] args) {
+    public static void start(String[] args) {
         SpringApplication.run(EventSide.class, args);
     }
 }

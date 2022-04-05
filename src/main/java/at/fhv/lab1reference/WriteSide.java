@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan("writeside")
 public class WriteSide {
-    public static void main(String[] args) {
+    public static void start(String[] args) {
         SpringApplication.run(WriteSide.class, args);
     }
 }
