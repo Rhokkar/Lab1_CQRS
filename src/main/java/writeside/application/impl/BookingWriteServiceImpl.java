@@ -1,5 +1,6 @@
 package writeside.application.impl;
 
+import eventside.domain.model.BookingCancelledEvent;
 import eventside.domain.model.BookingCreatedEvent;
 import writeside.application.api.BookingWriteService;
 import writeside.domain.model.Booking;
@@ -49,12 +50,15 @@ public class BookingWriteServiceImpl implements BookingWriteService {
         Booking booking = new Booking(UUID.randomUUID(), arrivalDate, departureDate, room.get(), guest.get());
         bookingRepository.book(booking);
 
-        BookingCreatedEvent event = new BookingCreatedEvent(UUID.randomUUID(), arrivalDate, departureDate, room.get(), guest.get());
+        BookingCreatedEvent event = new BookingCreatedEvent(booking.getBookingId(), arrivalDate, departureDate, room.get().getRoomNumber(), guest.get().getName());
         eventPublisher.publishEvent(event);
     }
 
     @Override
     public void cancelBooking(UUID bookingId) {
         bookingRepository.cancelBooking(bookingId);
+
+        BookingCancelledEvent event = new BookingCancelledEvent(bookingId, "TEST TEST TEST TEST TEST");
+        eventPublisher.publishEvent(event);
     }
 }

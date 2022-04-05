@@ -1,12 +1,12 @@
-package eventside.domain.model;
+package readside.communication.dto;
 
 import java.util.UUID;
 
-public class BookingCancelledEvent extends Event {
+public class CancelledBooking {
     private final UUID bookingId;
     private final String reason;
 
-    public BookingCancelledEvent(UUID bookingId, String reason) {
+    public CancelledBooking(UUID bookingId, String reason) {
         this.bookingId = bookingId;
         this.reason = reason;
     }

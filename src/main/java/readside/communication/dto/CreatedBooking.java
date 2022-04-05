@@ -1,16 +1,16 @@
-package eventside.domain.model;
+package readside.communication.dto;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
-public class BookingCreatedEvent extends Event {
+public class CreatedBooking {
     private final UUID bookingId;
     private final LocalDate arrivalDate;
     private final LocalDate departureDate;
     private final String roomNumber;
     private final String guestName;
 
-    public BookingCreatedEvent(UUID bookingId, LocalDate arrivalDate, LocalDate departureDate, String roomNumber, String guestName) {
+    public CreatedBooking(UUID bookingId, LocalDate arrivalDate, LocalDate departureDate, String roomNumber, String guestName) {
         this.bookingId = bookingId;
         this.arrivalDate = arrivalDate;
         this.departureDate = departureDate;
