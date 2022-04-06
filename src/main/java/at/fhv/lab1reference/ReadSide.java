@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan("readside")
 public class ReadSide {
-    public static void start(String[] args) {
+    public static void main(String[] args) {
         SpringApplication.run(ReadSide.class, args);
     }
 }

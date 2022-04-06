@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class Main {
     public static void main(String[] args) {
-        EventSide.start(args);
-        ReadSide.start(args);
-        WriteSide.start(args);
+        EventSide.main(args);
+        ReadSide.main(args);
+        WriteSide.main(args);
     }
 }
